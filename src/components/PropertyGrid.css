@@ -1,0 +1,87 @@
+ /* General Styling for the Section */
+.property-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
+ 
+.property-header {
+    margin-bottom: 30px;
+    text-align: center; /* Center-align the text */
+  }
+  
+  .property-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .property-header p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  /* Grid Layout */
+ /* Grid Layout */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(2, 200px); /* 2 rows of fixed height */
+    gap: 20px;
+    grid-template-areas:
+      "townhome houses houses offices"
+      "apartments apartments studio studio"; /* Swapped the pattern for lower two images */
+  }
+  
+  
+  /* Property Items */
+  .property-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .property-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(70%);
+  }
+  
+  .property-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .property-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    /* background: rgba(0, 0, 0, 0.6); */
+    color: white;
+  }
+  
+  /* Assigning Grid Areas */
+  .property-item.townhome {
+    grid-area: townhome;
+  }
+  
+  .property-item.houses {
+    grid-area: houses;
+  }
+  
+  .property-item.studio {
+    grid-area: studio;
+  }
+  
+  .property-item.apartments {
+    grid-area: apartments;
+  }
+  
+  .property-item.offices {
+    grid-area: offices;
+  }
+  

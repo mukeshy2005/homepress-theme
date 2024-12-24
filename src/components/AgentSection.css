@@ -1,0 +1,124 @@
+ /* General styles for the agent section */
+.agent-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.agent-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.agent-header p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Container for agent details */
+.agent-details-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center;
+  gap: 200px; /* Adjust gap to reduce space between items */
+}
+/* Navigation buttons */
+.nav-button {
+  background: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  border: none;
+  border-radius: 50%; /* Make the buttons circular */
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.nav-button:hover {
+  color: #fff;
+  background-color: #007bff; /* Add a blue background on hover */
+}
+
+/* Agent details */
+.agent-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.agent-image-container {
+  width: 180px; /* Circle size */
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease; /* Transition for hover effect */
+}
+.agent-image-container:hover {
+  border-color: #007bff; /* Blue border on hover */
+}
+
+.agent-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agent-info {
+  margin-top: 20px; /* Adds space between the circle and info */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agent-info h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.agent-info h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #666;
+}
+
+.agent-info p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #333;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+}
+
+/* Add responsiveness */
+@media screen and (max-width: 768px) {
+  .agent-details-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

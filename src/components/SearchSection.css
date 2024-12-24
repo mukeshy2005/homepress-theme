@@ -1,0 +1,71 @@
+.search-section {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    gap: 30px; /* Keeps consistent spacing between elements */
+    height: 100px; /* Reduce overall height of the section */
+    padding: 0 20px; /* Adds padding for some space inside the section */
+    background-color: #fff; /* Optional: Set a background color for clarity */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers text and arrow vertically */
+  }
+  
+  .dropdown-button {
+    padding: 10px 60px; /* Reduce padding for a smaller height */
+    font-size: 14px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .dropdown-arrow {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  .search-input {
+    flex: 1;
+    max-width: 300px; /* Optional: Limit the input width */
+    padding: 10px 60px; /* Reduce padding for a smaller height */
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .search-button {
+    display: flex;
+    align-items: center; /* Centers icon and text vertically */
+    padding: 10px 60px; /* Adjust padding for smaller button */
+    font-size: 14px;
+    color: white;
+    background-color: #4285f4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-button .search-icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  .advanced-search {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    display: flex;
+    align-items: center; /* Centers text and arrow vertically */
+  }
+  
+  .advanced-search:hover {
+    text-decoration: underline;
+  }
+  

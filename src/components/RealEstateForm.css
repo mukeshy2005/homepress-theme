@@ -1,0 +1,115 @@
+.real-estate-form {
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-section, .why-choose-us {
+    flex: 1;
+  }
+  
+  .form-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  input, select {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .personal-info {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .address-details {
+    display: flex;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .why-choose-us h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .why-choose-us p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .reason {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .reason .icon {
+    font-size: 2rem;
+    background-color: #e9f2ff;
+    color: #007bff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .reason h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .reason p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
