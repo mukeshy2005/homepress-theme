@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-logo">
-        <img src="logo.png" alt="Homepress Logo" />
+        <img src="white-logo.png" alt="Homepress Logo" />
         <span>homepress</span>
       </div>
       <div className="hamburger-menu" onClick={toggleNav}>
