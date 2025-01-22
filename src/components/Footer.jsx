@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-logo">
-          <LazyImage src="logo.png" alt="Homepress Logo" /> {/* Use LazyImage component */}
+          <LazyImage src="white-logo.png" alt="Homepress Logo" /> {/* Use LazyImage component */}
           <span>homepress</span>
         </div>
         <div className="social-icons">
