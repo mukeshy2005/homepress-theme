@@ -7,7 +7,7 @@
     padding: 0 20px; /* Adds padding for some space inside the section */
     background-color: #fff; /* Optional: Set a background color for clarity */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-    margin-top: 0; /* Remove top margin */
+    margin-top: -110px; /* Remove top margin */
     padding-top: 0; /* Remove top padding */
     width: 100%; /* Ensure search section does not exceed viewport width */
   }
