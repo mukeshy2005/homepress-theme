@@ -76,12 +76,12 @@ button:hover {
 .reasons {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 20px;
 }
 
 .reason {
   display: flex;
-  gap: 100px;
+  gap: 20px;
   align-items: flex-start;
 }
 
