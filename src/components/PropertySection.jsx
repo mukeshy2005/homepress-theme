@@ -1,5 +1,6 @@
 import React from 'react';
 import './PropertySection.css';
+import LazyImage from './LazyImage'; // Import LazyImage component
 
 const NewListings = () => {
   const listings = [
@@ -24,7 +25,7 @@ const NewListings = () => {
         {listings.map((listing, index) => (
           <div className="listing" key={index}>
             <div className="listing-image">
-              <img src={listing.image} alt={listing.title} />
+              <LazyImage src={listing.image} alt={listing.title} /> {/* Use LazyImage component */}
             </div>
             <div className="listing-details">
               <h2>{listing.title}</h2>

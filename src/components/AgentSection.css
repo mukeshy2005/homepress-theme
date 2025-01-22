@@ -20,31 +20,31 @@
 /* Container for agent details */
 .agent-details-container {
   display: flex;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center;
   justify-content: center;
-  gap: 200px; /* Adjust gap to reduce space between items */
+  gap: 200px; /* Large gap for desktop view */
 }
-/* Navigation buttons */
+
 .nav-button {
   background: none;
   width: 50px;
   height: 50px;
   display: flex;
-  align-items: center; /* Center the icon vertically */
-  justify-content: center; /* Center the icon horizontally */
+  align-items: center;
+  justify-content: center;
   border: none;
-  border-radius: 50%; /* Make the buttons circular */
+  border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
   color: #333;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .nav-button:hover {
   color: #fff;
-  background-color: #007bff; /* Add a blue background on hover */
+  background-color: #007bff;
 }
 
-/* Agent details */
 .agent-details {
   display: flex;
   flex-direction: column;
@@ -54,16 +54,11 @@
 }
 
 .agent-image-container {
-  width: 180px; /* Circle size */
+  width: 180px;
   height: 180px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #e0e0e0;
-  flex-shrink: 0;
-  transition: border-color 0.3s ease; /* Transition for hover effect */
-}
-.agent-image-container:hover {
-  border-color: #007bff; /* Blue border on hover */
 }
 
 .agent-image {
@@ -73,7 +68,7 @@
 }
 
 .agent-info {
-  margin-top: 20px; /* Adds space between the circle and info */
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -81,44 +76,26 @@
 
 .agent-info h2 {
   font-size: 1.5rem;
-  margin: 0;
   color: #333;
 }
 
 .agent-info h3 {
   font-size: 1rem;
-  margin: 0;
   color: #666;
 }
 
 .agent-info p {
   font-size: 0.9rem;
-  margin: 0;
   color: #333;
 }
 
-/* Social icons */
-.social-icons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.social-icons i {
-  font-size: 1.2rem;
-  color: #666;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.social-icons i:hover {
-  color: #007bff;
-}
-
-/* Add responsiveness */
+/* Responsive styles */
 @media screen and (max-width: 768px) {
   .agent-details-container {
-    flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* Reduce gap on smaller devices */
+  }
+
+  .nav-button {
+    font-size: 1.5rem; /* Smaller navigation buttons */
   }
 }

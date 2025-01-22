@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FeaturedListings.css';
+import LazyImage from './LazyImage'; // Import LazyImage component
 
 const FeaturedListings = () => {
   const listings = [
@@ -63,7 +64,7 @@ const FeaturedListings = () => {
   .map((listing, index) => (
     <div className="listing" key={index}>
       <div className="listing-image">
-        <img src={listing.image} alt={listing.title} />
+        <LazyImage src={listing.image} alt={listing.title} /> {/* Use LazyImage component */}
         <div className="listing-buttons">
           {listing.buttons.map((button, idx) => (
             <button key={idx} className={button.toLowerCase()}>

@@ -1,12 +1,14 @@
 import React from 'react';
 import './Footer.css';
+import LazyImage from './LazyImage'; // Import LazyImage component
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-logo">
-          <img src="logo.png" alt="HomePress Logo" />
+          <LazyImage src="logo.png" alt="Homepress Logo" /> {/* Use LazyImage component */}
+          <span>homepress</span>
         </div>
         <div className="social-icons">
           <i className="fab fa-facebook"></i>
@@ -15,6 +17,13 @@ const Footer = () => {
           <i className="fab fa-instagram"></i>
         </div>
       </div>
+      {/* <div className="footer-links">
+        <a href="/">Home</a>
+        <a href="/listing">Listing</a>
+        <a href="/property">Property</a>
+        <a href="/pages">Pages</a>
+        <a href="/idx-pages">IDX Pages</a>
+      </div> */}
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-column">

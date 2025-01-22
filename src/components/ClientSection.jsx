@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ClientSection.css";
 
 const ClientSection = () => {
@@ -26,22 +26,39 @@ const ClientSection = () => {
     "brand-4.png",
   ];
 
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const handleNext = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentTestimonial((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   return (
     <div className="client-section">
-      <h1 className="section-title">Our Clients Says</h1>
+      <h1 className="section-title">Our Clients Say</h1>
       <div className="testimonials-container">
-        <button className="nav-button">&#8249;</button>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial">
-            <div className="image-container">
-              <img src={testimonial.img} alt={testimonial.name} />
-            </div>
-            <h2>{testimonial.name}</h2>
-            <h3>{testimonial.title}</h3>
-            <p>{testimonial.feedback}</p>
+        <button className="nav-button" onClick={handlePrev}>
+          &#8249;
+        </button>
+        <div className="testimonial">
+          <div className="image-container">
+            <img
+              src={testimonials[currentTestimonial].img}
+              alt={testimonials[currentTestimonial].name}
+            />
           </div>
-        ))}
-        <button className="nav-button">&#8250;</button>
+          <h2>{testimonials[currentTestimonial].name}</h2>
+          <h3>{testimonials[currentTestimonial].title}</h3>
+          <p>{testimonials[currentTestimonial].feedback}</p>
+        </div>
+        <button className="nav-button" onClick={handleNext}>
+          &#8250;
+        </button>
       </div>
       <div className="logo-container">
         {logos.map((logo, index) => (

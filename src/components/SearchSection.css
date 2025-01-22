@@ -7,6 +7,9 @@
     padding: 0 20px; /* Adds padding for some space inside the section */
     background-color: #fff; /* Optional: Set a background color for clarity */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove top padding */
+    width: 100%; /* Ensure search section does not exceed viewport width */
   }
   
   .dropdown {
@@ -16,9 +19,9 @@
   }
   
   .dropdown-button {
-    padding: 10px 60px; /* Reduce padding for a smaller height */
-    font-size: 14px;
-    background: white;
+    padding: 1vw 3vw; /* Use relative units */
+    font-size: 1rem;
+    background: rgb(95, 178, 255);
     border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
@@ -26,15 +29,15 @@
   }
   
   .dropdown-arrow {
-    margin-left: 5px;
-    font-size: 12px;
+    margin-left: 0.5vw; /* Use relative units */
+    font-size: 1rem;
   }
   
   .search-input {
     flex: 1;
-    max-width: 300px; /* Optional: Limit the input width */
-    padding: 10px 60px; /* Reduce padding for a smaller height */
-    font-size: 14px;
+    max-width: 100%; /* Ensure input does not exceed viewport width */
+    padding: 1vw 3vw; /* Use relative units */
+    font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
   }
@@ -67,5 +70,42 @@
   
   .advanced-search:hover {
     text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .search-section {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: stretch; /* Stretch elements to match container width */
+      height: auto; /* Allow dynamic height */
+      gap: 15px; /* Space between elements */
+      padding: 20px; /* Add padding for visual spacing */
+    }
+  
+    .dropdown, /* Target Buy and Apartment sections */
+    .search-input, /* Target Search Box */
+    .search-button { /* Target Search Button */
+      width: 100%; /* Make each element take full width */
+    }
+  
+    .dropdown-button {
+      width: 100%; /* Ensure dropdown button takes full width */
+      padding: 12px; /* Add consistent padding */
+      text-align: left; /* Align text for dropdown */
+    }
+  
+    .search-input {
+      padding: 12px; /* Consistent padding for input field */
+      font-size: 1rem;
+    }
+  
+    .search-button {
+      justify-content: center; /* Center content inside the button */
+      padding: 15px; /* Make button look prominent */
+      font-size: 1rem; /* Adjust font size */
+    }
+  
+    .advanced-search {
+      text-align: center; /* Center the advanced search text */
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
   }
   

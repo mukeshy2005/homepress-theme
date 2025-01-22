@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AgentSection.css";
 
 const agentsData = [
@@ -38,20 +38,38 @@ const agentsData = [
 
 const AgentSection = () => {
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size and update `isMobile` state
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Mobile if width <= 768px
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNext = () => {
-    setCurrentStartIndex((prevIndex) => (prevIndex + 2) % agentsData.length);
+    setCurrentStartIndex((prevIndex) =>
+      (prevIndex + (isMobile ? 1 : 2)) % agentsData.length
+    );
   };
 
   const handlePrev = () => {
     setCurrentStartIndex((prevIndex) =>
-      prevIndex === 0 ? agentsData.length - 2 : prevIndex - 2
+      prevIndex === 0
+        ? agentsData.length - (isMobile ? 1 : 2)
+        : prevIndex - (isMobile ? 1 : 2)
     );
   };
 
+  // Dynamically adjust the number of visible agents
   const visibleAgents = agentsData.slice(
     currentStartIndex,
-    currentStartIndex + 2
+    currentStartIndex + (isMobile ? 1 : 2)
   );
 
   return (

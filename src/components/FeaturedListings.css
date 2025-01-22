@@ -163,4 +163,70 @@
     font-weight: bold;
     text-align: right;
   }
-  
+   /* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .featured-listings {
+    padding: 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Adjust height for dynamic content */
+  }
+
+  .fl-header h1 {
+    font-size: 2em; /* Adjust heading size for smaller screens */
+  }
+
+  .fl-header p {
+    font-size: 1em; /* Adjust subtitle size */
+  }
+
+  .listings-slider {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .listings-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center the cards */
+    width: 100%; /* Full width for smaller screens */
+    gap: 20px; /* Add space between cards */
+  }
+
+  .listing {
+    width: 90%; /* Reduce width to fit smaller screens */
+    margin: 0 auto; /* Center the card */
+  }
+
+  .listing:not(:last-child) {
+    margin-bottom: 20px; /* Add space below each card except the last one */
+  }
+
+  .listing-image {
+    height: auto; /* Adjust height for the image */
+  }
+
+  .listing-buttons button {
+    padding: 5px 8px; /* Reduce padding for buttons */
+    font-size: 0.7em; /* Reduce font size */
+  }
+
+  .listing-details {
+    flex-direction: column; /* Stack title and price vertically */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .details-text h2 {
+    font-size: 1em; /* Adjust title font size */
+  }
+
+  .details-text p {
+    font-size: 0.8em; /* Adjust description font size */
+  }
+
+  .price {
+    font-size: 1em; /* Adjust price font size */
+    margin-top: 5px; /* Add spacing between details and price */
+  }
+
+  .nav-arrow {
+    display: none; /* Hide navigation arrows on smaller screens */
+  }
+}

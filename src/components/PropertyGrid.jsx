@@ -1,5 +1,6 @@
 import React from "react";
 import "./PropertyGrid.css";
+import LazyImage from './LazyImage'; // Import LazyImage component
 
 const PropertyGrid = () => {
   const properties = [
@@ -22,7 +23,7 @@ const PropertyGrid = () => {
       <div className="property-grid">
         {properties.map((property, index) => (
           <div key={index} className={`property-item ${property.gridArea}`}>
-            <img src={property.img} alt={property.title} />
+            <LazyImage src={property.img} alt={property.title} /> {/* Use LazyImage component */}
             <div className="property-overlay">
               <h2>{property.title}</h2>
               <p>{property.properties}</p>
