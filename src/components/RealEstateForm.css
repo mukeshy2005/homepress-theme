@@ -8,17 +8,18 @@
 
 .form-section, .why-choose-us {
   flex: 1;
-  min-width: 300px; /* Ensure both sections adjust in smaller screens */
-}
-
-.form-section {
+  min-width: 300px;
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 500px; /* Ensures both sections are the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.form-section h1 {
+h1 {
   margin-bottom: 20px;
   color: #333;
   font-size: 1.8rem;
@@ -29,21 +30,17 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  flex-grow: 1;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  color: #555;
-}
-
-input, select {
-  margin-top: 5px;
+textarea {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  resize: none;
+  height: 100px;
+  
 }
 
 button {
@@ -54,55 +51,13 @@ button {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
   transition: background-color 0.3s ease;
+  align-self: flex-start;
+  
 }
 
 button:hover {
   background-color: #0056b3;
-}
-
-.why-choose-us h1 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.why-choose-us p {
-  color: #666;
-  margin-bottom: 30px;
-}
-
-.reasons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.reason {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.reason .icon {
-  font-size: 2rem;
-  background-color: #e9f2ff;
-  color: #007bff;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.reason h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.reason p {
-  margin: 5px 0 0;
-  font-size: 0.9rem;
-  color: #555;
 }
 
 /* Add responsiveness */
@@ -110,4 +65,62 @@ button:hover {
   .real-estate-form {
       flex-direction: column;
   }
+}
+
+/* Enhanced CSS for the form-section */
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff; /* Changed to white for a cleaner look */
+  padding: 25px; /* Adjusted padding for better spacing */
+  border-radius: 15px; /* Increased border-radius for a smoother look */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better depth */
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-bottom: 15px; /* Adjusted spacing for better alignment */
+  color: #333;
+  font-size: 2rem; /* Increased font size for better readability */
+  text-align: center;
+  font-weight: bold; /* Added bold for emphasis */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+  flex-grow: 1;
+}
+
+input, select, textarea {
+  padding: 12px; /* Unified padding for consistency */
+  border: 1px solid #ccc; /* Slightly darker border for better visibility */
+  border-radius: 8px; /* Increased border-radius for consistency with form section */
+  font-size: 1rem;
+  margin: 10px;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 120px; /* Increased minimum height */
+}
+
+button {
+  padding: 12px 25px; /* Increased padding for better click area */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Increased border-radius for consistency */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
